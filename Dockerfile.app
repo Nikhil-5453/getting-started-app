@@ -1,2 +1,6 @@
 FROM node:22-alpine
 LABEL Maintainer="Nikhil"
+WORKDIR /apps
+RUN npm install --omit=dev
+CMD [ "node", "src/index.js" ]
+EXPOSE 3000
